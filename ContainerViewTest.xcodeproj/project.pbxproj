@@ -14,6 +14,8 @@
 		D48855B91DE830090005E72F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D48855B71DE830090005E72F /* LaunchScreen.storyboard */; };
 		D48855C41DE830090005E72F /* ContainerViewTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48855C31DE830090005E72F /* ContainerViewTestTests.swift */; };
 		D48855CF1DE830090005E72F /* ContainerViewTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48855CE1DE830090005E72F /* ContainerViewTestUITests.swift */; };
+		D48855DD1DE830860005E72F /* SubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48855DC1DE830860005E72F /* SubViewController.swift */; };
+		D48855DF1DE831650005E72F /* RoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D48855DE1DE831650005E72F /* RoundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		D48855CA1DE830090005E72F /* ContainerViewTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ContainerViewTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D48855CE1DE830090005E72F /* ContainerViewTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewTestUITests.swift; sourceTree = "<group>"; };
 		D48855D01DE830090005E72F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D48855DC1DE830860005E72F /* SubViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubViewController.swift; sourceTree = "<group>"; };
+		D48855DE1DE831650005E72F /* RoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				D48855AE1DE830090005E72F /* AppDelegate.swift */,
 				D48855B01DE830090005E72F /* ViewController.swift */,
+				D48855DC1DE830860005E72F /* SubViewController.swift */,
+				D48855DE1DE831650005E72F /* RoundView.swift */,
 				D48855B21DE830090005E72F /* Main.storyboard */,
 				D48855B51DE830090005E72F /* Assets.xcassets */,
 				D48855B71DE830090005E72F /* LaunchScreen.storyboard */,
@@ -259,6 +265,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D48855DD1DE830860005E72F /* SubViewController.swift in Sources */,
+				D48855DF1DE831650005E72F /* RoundView.swift in Sources */,
 				D48855B11DE830090005E72F /* ViewController.swift in Sources */,
 				D48855AF1DE830090005E72F /* AppDelegate.swift in Sources */,
 			);
