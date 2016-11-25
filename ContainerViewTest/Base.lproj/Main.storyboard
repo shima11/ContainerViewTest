@@ -22,7 +22,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9JO-nm-as1">
-                                <rect key="frame" x="0.0" y="547" width="375" height="387"/>
+                                <rect key="frame" x="0.0" y="547" width="375" height="120"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="S0r-bA-z5s" kind="embed" id="Sda-nn-wd7"/>
@@ -43,8 +43,12 @@
         <scene sceneID="Ybd-ih-Sud">
             <objects>
                 <viewController id="S0r-bA-z5s" customClass="SubViewController" customModule="ContainerViewTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MkH-YW-P4f"/>
+                        <viewControllerLayoutGuide type="bottom" id="rP8-fW-6ur"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="ADa-OH-mZf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="387"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ApP-X6-0Dj" customClass="RoundView" customModule="ContainerViewTest" customModuleProvider="target">
@@ -63,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0MS-5a-fPL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137" y="972"/>
+            <point key="canvasLocation" x="137" y="635"/>
         </scene>
     </scenes>
 </document>
