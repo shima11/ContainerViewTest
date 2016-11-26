@@ -199,6 +199,7 @@
 				TargetAttributes = {
 					D48855AA1DE830090005E72F = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = 64T4PJ8WCZ;
 						ProvisioningStyle = Automatic;
 					};
 					D48855BE1DE830090005E72F = {
@@ -418,6 +419,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 64T4PJ8WCZ;
 				INFOPLIST_FILE = ContainerViewTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shimaApps.ContainerViewTest;
@@ -430,6 +432,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 64T4PJ8WCZ;
 				INFOPLIST_FILE = ContainerViewTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shimaApps.ContainerViewTest;
@@ -511,6 +514,7 @@
 				D48855D51DE830090005E72F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D48855D61DE830090005E72F /* Build configuration list for PBXNativeTarget "ContainerViewTestTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +523,7 @@
 				D48855D81DE830090005E72F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D48855D91DE830090005E72F /* Build configuration list for PBXNativeTarget "ContainerViewTestUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +532,7 @@
 				D48855DB1DE830090005E72F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
