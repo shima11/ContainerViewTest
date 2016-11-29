@@ -16,11 +16,9 @@ enum ScrollState {
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var containerView: UIView!
-    
     @IBOutlet weak var containerViewHeight: NSLayoutConstraint!
-    
+    @IBOutlet weak var containerViewTopMargin: NSLayoutConstraint!
     
     var state: ScrollState = ScrollState.Top
     
@@ -32,21 +30,13 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         self.view.backgroundColor = UIColor.lightGray
         
-        let edgeInsets = UIEdgeInsets(top: containerView.frame.height - 120, left: 0, bottom: 0, right: 0)
-        scrollView.contentInset = edgeInsets
-        
-        scrollView.delegate = self
-        
-        
         animator = UIDynamicAnimator(referenceView: self.view)
         
-//        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(ViewController.panGesture(sender:)))
-//        containerView.addGestureRecognizer(panGesture)
-        
+        let panGesture = UIPanGestureRecognizer(target: self, action: #selector(ViewController.panGesture(sender:)))
+        containerView.addGestureRecognizer(panGesture)
         
 //        containerView.frame = CGRect(x:containerView.frame.minX, y: containerView.frame.minY, width: containerView.frame.width, height: self.view.frame.height*0.8)
         
@@ -75,13 +65,26 @@ class ViewController: UIViewController {
 
         }
         if sender.state == .ended {
-            let viewcontroller = self.childViewControllers[0]
-            print(viewcontroller.view.frame)
+//            let viewcontroller = self.childViewControllers[0]
+//            print(viewcontroller.view.frame)
 
-//            if currentPoint.y < self.view.frame.height*0.4 {
-//                print("0.4")
-//                snapAnimation(point: CGPoint(x: self.view.frame.width/2, y: self.view.frame.height*0.2))
-//            }
+            if currentPoint.y < self.view.frame.height*0.4 {
+                print("0.4")
+
+                self.view.setNeedsUpdateConstraints()
+
+                containerViewTopMargin.constant = 64
+                
+                UIView.animate(withDuration: 0.6,
+                                    delay: 0.0,
+                    usingSpringWithDamping: 0.4,
+                    initialSpringVelocity: 1.5,
+                    options: UIViewAnimationOptions.curveLinear,
+                    animations: { () -> Void in
+                        self.view.layoutIfNeeded()
+                }) { (Bool) -> Void in
+                }
+            }
 //            else if currentPoint.y < self.view.frame.height*0.7 {
 //                print("0.6")
 //                snapAnimation(point: CGPoint(x: self.view.frame.width/2, y: self.view.frame.height*0.7))
@@ -101,14 +104,6 @@ class ViewController: UIViewController {
         animator.addBehavior(snap)
     }
 }
-
-
-extension ViewController: UIScrollViewDelegate {
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-    }
-}
-
 
 // touch event
 //extension ViewController {
