@@ -21,6 +21,7 @@ enum SwipeDirection {
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var containerMapView: UIView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var containerViewTopMargin: NSLayoutConstraint!
     
@@ -36,7 +37,7 @@ class ViewController: UIViewController {
         
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(ViewController.panGesture(sender:)))
         containerView.addGestureRecognizer(panGesture)
-        
+                
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,7 +64,7 @@ class ViewController: UIViewController {
             else if distance < 0 { swipeState = SwipeDirection.Up }
             else if distance == 0 { swipeState = SwipeDirection.None }
             
-            if currentPoint.y < self.view.frame.height*0.4 {
+            if containerViewTopMargin.constant < self.view.frame.height*0.4 {
                 switch swipeState {
                 case SwipeDirection.Up:
                     moveView(margin: 64)
@@ -73,7 +74,7 @@ class ViewController: UIViewController {
                     moveView(margin: view.frame.height*0.6)
                 }
             }
-            else if currentPoint.y < self.view.frame.height*0.7 {
+            else if containerViewTopMargin.constant < self.view.frame.height*0.7 {
                 switch swipeState {
                 case SwipeDirection.Up:
                     moveView(margin: 64)
@@ -83,7 +84,7 @@ class ViewController: UIViewController {
                     moveView(margin: view.frame.height-80)
                 }
             }
-            else if currentPoint.y < self.view.frame.height {
+            else if containerViewTopMargin.constant < self.view.frame.height {
                 switch swipeState {
                 case SwipeDirection.Up:
                     moveView(margin: view.frame.height*0.6)
